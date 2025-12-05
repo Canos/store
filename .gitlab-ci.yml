@@ -5,7 +5,7 @@ build:
   stage: build
   artifacts:
     paths:
-      - /dist/*
+      - /dist/angular-redux2/store/*
   script:
     - echo "CI_PIPELINE_ID $CI_PIPELINE_ID"
     - yarn cache clean
