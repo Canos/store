@@ -5,6 +5,11 @@ build:
   stage: build
   tags: 
     - angular
+  before_script:
+    - echo "Running script to use node 22 ($CI_PIPELINE_ID)"
+    - export NVM_DIR="$HOME/.nvm"
+    - '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' 
+    - nvm use 22
   artifacts:
     paths:
       - /dist/angular-redux2/store/*
