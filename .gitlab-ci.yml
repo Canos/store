@@ -12,7 +12,7 @@ build:
     - nvm use 22
   artifacts:
     paths:
-      - /dist/angular-redux2/store/*
+      - /dist/*
   script:
     - echo "CI_PIPELINE_ID $CI_PIPELINE_ID"
     - yarn cache clean
